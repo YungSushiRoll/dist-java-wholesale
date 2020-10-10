@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -24,10 +25,10 @@ public class WholesaleOrder {
     private String terms;
 
     @Column(name = "purchase_date")
-    private LocalDateTime purchaseDate;
+    private LocalDate purchaseDate;
 
     @Column(name = "shipped_date")
-    private LocalDateTime shippedDate;
+    private LocalDate shippedDate;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
